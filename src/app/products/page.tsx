@@ -15,7 +15,7 @@ const ProductPage = () => {
   return (
     <div className="bg-[#FFFFFF] wrappe">
       <Nav bg={false} />
-      <div className=" lg:w-wrappe h-[100px] ">
+      <div className="w-screen lg:w-wrappe h-[100px] ">
         <nav className="text-sm text-[#000000] mb-6">
           <Link  href="/" ><span  className="text-center text-lg text-[#9F9F9F] ml-10 pl-10 pr-5">
             Home

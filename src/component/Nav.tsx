@@ -9,7 +9,7 @@ const Nav = ({ bg = true }: { bg ?: boolean }) => {
       style={{
         backgroundColor: bg ? "#FBEBB5" : "transparent",
       }}
-      className="wrappe h-[100px] flex items-center pt-10 lg:justify-end"
+      className=" w-screen lg:wrappe h-[100px] flex items-center pt-10 lg:justify-end"
     >
       <nav>
         <ul className="flex justify-center lg:items-center lg:px-6">

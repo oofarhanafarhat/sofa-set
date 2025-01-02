@@ -4,12 +4,12 @@ import Image from "next/image";
 
 const Shop = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-screen lg:wrappe">
       {/* Navbar Section */}
       <Nav bg={false} />
 
       {/* Image Section */}
-      <div className=" w-full lg:wrappe relative h-[316px] flex items-center justify-center bg-gray-50">
+      <div className=" w-screen lg:wrappe relative h-[316px] flex items-center justify-center bg-gray-50">
         <div className="absolute inset-0">
           <Image
             src="/shopbg.png"
@@ -81,62 +81,62 @@ const Shop = () => {
           {
             src: "/t4.png",
             title: "Grain coffee table",
-            price: "Rs. Rs. 15,000.00",
+            price: " Rs. 15,000.00",
           },
           {
             src: "/t5.png",
             title: "Kent coffee table",
-            price: "Rs. Rs. 225,000.00",
+            price: "Rs.225,000.00",
           },
           {
             src: "/pic00.jpg",
             title: "Round coffee table_color ",
-            price: "Rs. Rs. 251,000.00",
+            price: "Rs.251,000.00",
           },
           {
             src: "/t7.png",
             title: "Reclaimed  teak coffee ",
-            price: "Rs. Rs. 25,200.00",
+            price: "Rs.25,200.00",
           },
           {
             src: "/t8.png",
             title: "Plain console",
-            price: "Rs. Rs. 258,200.00",
+            price: "Rs.258,200.00",
           },
           {
             src: "/pic11.jpg",
             title: "Reclaimed teak ",
-            price: "Rs. Rs. 20,000.00",
+            price: "Rs.20,000.00",
           },
           {
             src: "/t10.png",
             title: "SJP_0825 ",
-            price: "Rs. Rs. 200,000.00",
+            price: "Rs.200,000.00",
           },
           {
             src: "/t11.png",
             title: "Bella chair and table",
-            price: "Rs. Rs. 100,000.00",
+            price: "Rs.100,000.00",
           },
           {
             src: "/pic22.jpg",
             title: "Granite square side table",
-            price: "Rs. Rs. 258,800.00",
+            price: "Rs.258,800.00",
           },
           {
             src: "/t11.jpg",
             title: "Asgaard sofa",
-            price: "Rs. Rs. 250,000.00",
+            price: "Rs.250,000.00",
           },
           {
             src: "/t12.jpg",
             title: "Maya sofa three seater",
-            price: "Rs. Rs. 115,000.00",
+            price: "Rs.115,000.00",
           },
           {
             src: "/t13.jpg",
             title: "Outdoor sofa set",
-            price: "Rs Rs. 244,000.00",
+            price: "Rs,244,000.00",
           },
         ].map((item, index) => (
           <div
@@ -174,19 +174,19 @@ const Shop = () => {
         </button>
       </div>
       <div className="wrappe h-[300px] bg-[#FAF4F4] lg:flex justify-center items-center">
-        <div className="w-[376px] h-[108px]  text-[#000000]">
+        <div className="w-[376px] h-[108px]  text-[#000000] text-left lg:mx-4 mb-6 lg:mb-0">
           <h1 className="text-xl font-bold">Free Delivery</h1>
           <h2 className="text-[#9F9F9F] font-normal">
             For all oders over $50, consectetur adipim scing elit.
           </h2>
         </div>
-        <div className="w-[376px] h-[108px]  text-[#000000]">
+        <div className="w-[376px] h-[108px]  text-[#000000] text-left lg:mx-4 mb-6 lg:mb-0">
           <h1 className="text-xl font-bold">90 Days Return</h1>
           <h2 className="text-[#9F9F9F] font-normal">
             If goods have problems, consectetur adipim scing elit.
           </h2>
         </div>
-        <div className="w-[376px] h-[108px]  text-[#000000]">
+        <div className="w-[376px] h-[108px]  text-[#000000] text-left lg:mx-4 mt-2 lg:mt-0">
           <h1 className="text-xl font-bold">Secure Payment</h1>
           <h2 className="text-[#9F9F9F] font-normal">
             100% secure payment, consectetur adipim scing elit.

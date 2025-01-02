@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Pick = () => {
   return (
-    <div className="wrapper bg-[#FFFFFF] h-auto py-10">
+    <div className="w-screen lg:wrappe bg-[#FFFFFF] h-auto py-10">
       <div className="text-center mb-8">
         <h1 className="text-[#000000] lg:text-4xl pb-2 font-semibold font-poppins">
           Top Picks For You

@@ -1,4 +1,4 @@
-import Com from "@/component/Com";
+
 import Nav from "@/component/Nav";
 import React from "react";
 import Image from "next/image";
@@ -7,7 +7,7 @@ const Checkout = () => {
   return (
     <div>
       <Nav bg={false} />
-      <div className=" w-full lg:wrappe relative h-[316px] flex items-center justify-center bg-gray-50">
+      <div className=" w-screen lg:wrappe relative h-[316px] flex items-center justify-center bg-gray-50">
         <div className="absolute inset-0">
           <Image
             src="/shopbg.png"
@@ -178,7 +178,26 @@ const Checkout = () => {
         </div>
       </div>
 
-      <Com />
+      <div className="wrappe h-[300px] bg-[#FAF4F4] lg:flex justify-center items-center">
+        <div className="w-[376px] h-[108px]  text-[#000000] text-left lg:mx-4 mb-6 lg:mb-0">
+          <h1 className="text-xl font-bold  pb-5">Free Delivery</h1>
+          <h2 className="text-[#9F9F9F] font-normal">
+            For all oders over $50, consectetur adipim scing elit.
+          </h2>
+        </div>
+        <div className="w-[376px] h-[108px]  text-[#000000] text-left lg:mx-4 mb-6 lg:mb-0">
+          <h1 className="text-xl font-bold pb-5">90 Days Return</h1>
+          <h2 className="text-[#9F9F9F] font-normal">
+            If goods have problems, consectetur adipim scing elit.
+          </h2>
+        </div>
+        <div className="w-[376px] h-[108px]  text-[#000000] text-left lg:mx-4 mt-2 lg:mt-0">
+          <h1 className="text-xl font-bold pb-5">Secure Payment</h1>
+          <h2 className="text-[#9F9F9F] font-normal">
+            100% secure payment, consectetur adipim scing elit.
+          </h2>
+        </div>
+      </div>
     </div>
   );
 };

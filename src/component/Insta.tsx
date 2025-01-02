@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Insta = () => {
   return (
-    <div className="wrapper min-h-screen flex items-center justify-center relative">
+    <div className="w-screen   lg:wrappe min-h-screen flex items-center justify-center relative l:mt-0">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
