@@ -2,58 +2,69 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div className=" w-screen lg:wrapper h-auto lg:h-[555px] bg-[#FFFFFF] mb-0">
-      {/* Main Content */}
-      <div className="w-screen lg:w-[1240px] mx-auto lg:h-[419px] flex flex-col lg:flex-row lg:justify-around lg:items-start items-center border-b border-gray-400 pt-20">
+    <footer className="w-full bg-gradient-to-r from-[#FFF9E5] to-[#FFF1CC] text-black font-poppins transition-all duration-300">
+      {/* Top Section */}
+      <div className="max-w-[1240px] mx-auto px-6 py-16 border-b border-gray-300 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center lg:text-left">
         
-        {/* Address Section */}
-        <div className="w-screen lg:w-[285px] mt-10 lg:mt-0 lg:mb-0 text-center">
-          <h1 className="text-md text-[#9F9F9F] font-light">
-            400 University Drive Suite 200 Coral Gables,<br />
-            FL 33134 USA
-          </h1>
+        {/* Address */}
+        <div>
+          <p className="text-gray-600 text-sm leading-relaxed">
+            400 University Drive Suite 200 <br />
+            Coral Gables, FL 33134 USA
+          </p>
         </div>
 
-        {/* Links Section */}
-        <div className="w-full lg:w-auto mt-10 lg:mt-0 text-center">
-          <h1 className="font-poppins text-lg text-[#9F9F9F] font-light mb-6">Links</h1>
-          <h2 className="pb-4 font-poppins text-lg text-[#000000] font-medium">Home</h2>
-          <h2 className="pb-4 font-poppins text-lg text-[#000000] font-medium">Shop</h2>
-          <h2 className="pb-4 font-poppins text-lg text-[#000000] font-medium">About</h2>
-          <h2 className="pb-4 font-poppins text-lg text-[#000000] font-medium">Contact</h2>
+        {/* Links */}
+        <div>
+          <h3 className="text-gray-500 text-md mb-4">Links</h3>
+          <ul className="space-y-2">
+            {['Home', 'Shop', 'Contact'].map((link, idx) => (
+              <li
+                key={idx}
+                className="hover:text-[#b88e2f] cursor-pointer transition-colors duration-200"
+              >
+                {link}
+              </li>
+            ))}
+          </ul>
         </div>
 
-        {/* Help Section */}
-        <div className="w-full lg:w-auto mt-10 lg:mt-0 text-center">
-          <h1 className="font-poppins text-lg text-[#9F9F9F] font-light mb-6">Help</h1>
-          <h2 className="pb-4 font-poppins text-lg text-[#000000] font-medium">Payment Options</h2>
-          <h2 className="pb-4 font-poppins text-lg text-[#000000] font-medium">Returns</h2>
-          <h2 className="pb-4 font-poppins text-lg text-[#000000] font-medium">Privacy Policies</h2>
+        {/* Help */}
+        <div>
+          <h3 className="text-gray-500 text-md mb-4">Help</h3>
+          <ul className="space-y-2">
+            {['Payment Options', 'Returns', 'Privacy Policies'].map((item, idx) => (
+              <li
+                key={idx}
+                className="hover:text-[#b88e2f] cursor-pointer transition-colors duration-200"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
 
-        {/* Newsletter Section */}
-        <div className="w-full lg:w-auto mt-10 lg:mt-0 text-center">
-          <h1 className="font-poppins text-lg text-[#9F9F9F] font-light mb-4">Newsletter</h1>
-          <div className="lg:flex lg:justify-center lg:items-center gap-4">
+        {/* Newsletter */}
+        <div>
+          <h3 className="text-gray-500 text-md mb-4">Newsletter</h3>
+          <div className="flex flex-col sm:flex-row items-center gap-3">
             <input
-              type="text"
-              placeholder="Enter Your Email Address"
-              className="border-b border-gray-950 text-sm py-2 w-[250px] text-[#9F9F9F] focus:outline-none"
+              type="email"
+              placeholder="Enter your email"
+              className="border-b border-black bg-transparent px-2 py-2 text-sm w-full focus:outline-none placeholder:text-gray-500"
             />
-            <button className="border-b border-gray-950 text-md font-bold py-2 w-[120px] text-[#000000]">
+            <button className="border-b border-black font-semibold text-sm px-4 py-2 hover:text-[#b88e2f] transition-colors duration-200">
               SUBSCRIBE
             </button>
           </div>
         </div>
       </div>
 
-      {/* Footer Bottom */}
-      <div className="text-start pt-8 pl-10">
-        <h1 className="text-[#000000] font-medium">
-          2022 Meubel House. All rights reserved
-        </h1>
+      {/* Bottom Text */}
+      <div className="text-center text-sm py-6 text-black">
+        © 2022 Meubel House. All rights reserved.
       </div>
-    </div>
+    </footer>
   );
 };
 

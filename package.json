@@ -9,16 +9,33 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "15.1.0",
+    "@clerk/nextjs": "^6.20.2",
+    "@sanity/image-url": "^1.1.0",
+    "@sanity/vision": "^3.90.0",
+    "@stripe/react-stripe-js": "^3.7.0",
+    "@stripe/stripe-js": "^7.3.1",
+    "@vercel/postgres": "^0.10.0",
+    "drizzle-orm": "^0.44.1",
+    "framer-motion": "^12.15.0",
+    "next": "^15.2.3",
+    "next-sanity": "^9.12.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-icons": "^5.4.0"
+    "react-icons": "^5.4.0",
+    "sanity": "^3.90.0",
+    "stripe": "^18.2.1",
+    "styled-components": "^6.1.18"
   },
+  "overrides": {
+  "@sanity/client": "7.6.0"
+},
+
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/stripe": "^8.0.417",
     "eslint": "^9",
     "eslint-config-next": "15.1.0",
     "postcss": "^8",

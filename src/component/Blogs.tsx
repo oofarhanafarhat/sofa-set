@@ -3,69 +3,85 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Blogs = () => {
+  const blogData = [
+    {
+      img: "/pic001.jpeg",
+      title: "Going all-in with millennial loving design",
+      time: "5 min",
+      date: "12th Oct 2022",
+    },
+    {
+      img: "/pic002.jpeg",
+      title: "Embracing minimalist living to spaces",
+      time: "4 min",
+      date: "15th Oct 2022",
+    },
+    {
+      img: "/pic003.jpeg",
+      title: "Crafting comfort with modular design",
+      time: "6 min",
+      date: "18th Oct 2022",
+    },
+  ];
+
   return (
-    <div className="bg-[#FFFFFF] w-screen  lg:wrappe flex flex-col items-center ">
-      {/* Centered Headings */}
-      <div className="text-center my-6">
-        <h1 className="text-2xl font-bold pb-5 text-[#000000] ">Our Blogs</h1>
-        <h2 className="text-lg text-[#000000] pb-5">
-          Find a bright idea to suit your taste with our great selection
-        </h2>
+    <div className="w-full bg-white py-12 px-4 font-poppins">
+      {/* Headings */}
+      <div className="text-center mb-14">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-3">
+          Our Blogs
+        </h1>
+        <p className="text-base md:text-lg text-gray-600 max-w-xl mx-auto">
+          Explore stylish ideas, smart furniture tips, and the latest design
+          trends to inspire your space.
+        </p>
       </div>
-      <div className=" lg:flex lg:flex-row justify-center space-x-6">
-        <div className="text-center lg:w-[393] lg:h-[555]">
-          <Image src="/pic001.jpeg" width={393} height={393} alt="" />
-          <h2 className="text-xl font-light mt-4 text-[#000000]">
-            Going all-in with millennial design
-          </h2>
-          <button className="mt-2 px-4 py-2 border-b  border-gray-950 font-medium text-[#000000]">
-            Read More
-          </button>
-          <div className="flex justify-center items-center mt-2 space-x-4 text-[#000000]">
-            <Image src="/vector.png" width={18} height={18} alt="" />
-            <h3>5 min</h3>
-            <Image src="/uil.png" width={22} height={22} alt="" />
-            <h3>12th Oct 2022</h3>
-          </div>
-        </div>
 
-        <div className="text-center lg:w-[393] lg:h-[555]  ">
-          <Image src="/pic002.jpeg" width={393} height={393} alt="" />
-          <h2 className="text-xl font-light mt-4 text-[#000000]">
-            Going all-in with millennial design
-          </h2>
-          <button className="mt-2 px-4 py-2 text-[#000000] border-b  border-gray-950 font-medium">
-            Read More
-          </button>
-          <div className="flex justify-center items-center mt-2 space-x-4 text-[#000000]">
-            <Image src="/vector.png" width={18} height={18} alt="" />
-            <h3>5 min</h3>
-            <Image src="/uil.png" width={22} height={22} alt="" />
-            <h3>12th Oct 2022</h3>
-          </div>
-        </div>
+      {/* Blog Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
+        {blogData.map((blog, i) => (
+          <div
+            key={i}
+            className="group bg-white shadow-md hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden transform hover:scale-[1.03] cursor-pointer"
+          >
+            <div className="overflow-hidden">
+              <Image
+                src={blog.img}
+                width={393}
+                height={393}
+                alt={blog.title}
+                className="rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div className="flex flex-col items-center p-5">
+              <h2 className="text-xl font-semibold text-gray-800 mt-3 text-center">
+                {blog.title}
+              </h2>
 
-        <div className="text-center lg:w-[393] lg:h-[555]  lg:mb-0">
-          <Image src="/pic003.jpeg" width={393} height={393} alt="" />
-          <h2 className="text-xl font-light mt-4 text-[#000000]">
-            Going all-in with millennial design
-          </h2>
-          <button className="mt-2 px-4 py-2 border-b  border-gray-950 font-medium text-[#000000] ">
-            Read More
-          </button>
-          <div className="flex justify-center items-center mt-2 space-x-4 text-[#000000]">
-            <Image src="/vector.png" width={18} height={18} alt="" />
-            <h3>5 min</h3>
-            <Image src="/uil.png" width={22} height={22} alt="" />
-            <h3>12th Oct 2022</h3>
+              <button className="mt-4 px-6 py-2 border border-gray-900 rounded-full text-gray-900 font-medium transition-all duration-300 hover:bg-gray-900 hover:text-white">
+                Read More
+              </button>
+
+              <div className="flex items-center gap-6 text-sm text-gray-600 mt-4">
+                <div className="flex items-center gap-2">
+                  <Image src="/vector.png" width={8} height={6} alt="clock" />
+                  <span>{blog.time}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Image src="/uil.png" width={16} height={16} alt="calendar" />
+                  <span>{blog.date}</span>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
-      <div className="mb-14">
-        <Link href={"/b1"}>
-          {" "}
-          <button className="py-2 border-b border-gray-950  text-[#000000] font-medium text-lg items-center ">
-            View All Post
+
+      {/* View All Button */}
+      <div className="text-center">
+        <Link href="/b1">
+          <button className="px-8 py-3 border border-gray-900 rounded-full text-gray-900 font-medium transition-all duration-300 hover:bg-gray-900 hover:text-white">
+            View All Posts
           </button>
         </Link>
       </div>

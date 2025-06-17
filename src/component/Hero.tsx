@@ -1,42 +1,52 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="w-screen lg:wrappe h-auto bg-[#FAF4F4] flex flex-col md:flex-row justify-around items-center gap-10 font-poppins p-4">
-      {/* First Item */}
-      <div className="flex flex-col items-center text-center">
-        <div className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[605px] lg:h-[562px]">
-          <Image 
-            src="/pic02.jpg" 
-            alt="Side Table" 
-            layout="fill" 
-            objectFit="contain" 
-          />
-        </div>
-        <h1 className="mt-4 text-xl md:text-2xl lg:text-4xl font-medium mb-5">Side Table</h1>
-       <Link href={"/shop"}> <button className="mt-2 border-b-2 border-gray-900 font-semibold text-2xl md:text-xl mb-20 pb-5">
-          View More
-        </button></Link>
-      </div>
+    <section className="w-full bg-[#FAF4F4] py-12">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-evenly gap-12">
+        {/* First Item */}
+        <div className="flex flex-col items-center text-center space-y-6 max-w-md group">
+          <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl transition-transform duration-300 group-hover:scale-105 group-hover:shadow-xl">
+            <Image
+              src="/pic02.jpg"
+              alt="Side Table"
+              width={400}
+              height={300}
+              className="object-contain"
+            />
+          </div>
+          <h1 className="text-2xl lg:text-4xl font-semibold">Side Table</h1>
+          <Link href="/shop">
+           <button className="px-6 py-3 rounded-full text-base lg:text-lg font-semibold border border-black text-black bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-105 shadow-sm hover:shadow-md">
+  View More
+</button>
 
-      {/* Second Item */}
-      <div className="flex flex-col items-center text-center">
-        <div className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[605px] lg:h-[562px]">
-          <Image 
-            src="/pic03.jpg" 
-            alt="Arm Chair" 
-            layout="fill" 
-            objectFit="contain" 
-          />
+          </Link>
         </div>
-        <h1 className="mt-4 text-xl md:text-2xl lg:text-4xl font-medium mb-5">Side Table</h1>
-      <Link href={"/shop"}>  <button className="mt-2 border-b-2 border-gray-900 font-semibold text-2xl md:text-xl mb-20 pb-5">
-          View More
-        </button></Link>
+
+        {/* Second Item */}
+        <div className="flex flex-col items-center text-center space-y-6 max-w-md group">
+          <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl transition-transform duration-300 group-hover:scale-105 group-hover:shadow-xl">
+            <Image
+              src="/pic03.jpg"
+              alt="Arm Chair"
+              width={400}
+              height={300}
+              className="object-contain"
+            />
+          </div>
+          <h1 className="text-2xl lg:text-4xl font-semibold">Arm Chair</h1>
+          <Link href="/shop">
+          <button className="px-6 py-3 rounded-full text-base lg:text-lg font-semibold border border-black text-black bg-white transition-all duration-300 hover:bg-black hover:text-white hover:scale-105 shadow-sm hover:shadow-md">
+  View More
+</button>
+
+          </Link>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,10 +1,9 @@
 import Blogs from "@/component/Blogs";
 import Hero from "@/component/Hero";
 import Insta from "@/component/Insta";
-import Nav from "@/component/Nav";
 import Pick from "@/component/Pick";
 import Pick1 from "@/component/Pick1";
-import Title from "@/component/Title";
+import Title from "@/component/Title"
 
 
 export default function Home() {
@@ -12,13 +11,14 @@ export default function Home() {
     
       
 <div >
-  < Nav/>
+
 <Title/>
 <Hero/>
-< Pick/>
+<Pick/>
 <Pick1/>
-< Blogs/>
+<Blogs/>
 <Insta/>
+
 </div>
   );
 }

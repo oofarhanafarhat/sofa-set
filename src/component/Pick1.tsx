@@ -1,29 +1,37 @@
+"use client"; // if you plan to add interactivity later
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 const Pick1 = () => {
   return (
-    <div className=" w-screen lg:wrappe bg-[#FFF9E5] h-auto py-10">
-      <div className="lg:flex justify-between items-center">
-        <div className="relative w-full lg:w-[983px] h-[639px]">
+    <div className="w-full bg-[#FFF9E5] py-10">
+      <div className="flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto gap-10 px-4">
+        {/* Image Section */}
+        <div className="relative w-full lg:w-2/3 h-[300px] sm:h-[400px] lg:h-[600px]">
           <Image
-            src={"/pic8.png"}
+            src="/pic8.png"
             alt="Asgaard sofa"
-            layout="fill"
-            objectFit="contain"
+            fill
+            style={{ objectFit: "contain" }}
+            className="rounded-xl"
           />
         </div>
-        <div className="flex flex-col items-center justify-center text-center px-5 lg:px-0 lg:w-[331px] mt-10 lg:mt-0 mr-14">
-          <h2 className="text-2xl font-semibold text-[#000000] font-poppins">
+
+        {/* Text Section */}
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left lg:w-1/3 space-y-5">
+          <h2 className="text-xl lg:text-2xl font-semibold text-[#000000] font-poppins">
             New Arrivals
           </h2>
-          <h1 className="text-4xl font-bold text-[#000000] mt-4 mb-6">
-            Asgaard sofa
+          <h1 className="text-3xl lg:text-4xl font-bold text-[#000000] font-poppins">
+            Asgaard Sofa
           </h1>
-         <Link href={"/products"}> <button className="px-14 py-4 border border-gray-950 text-[#000000] text-2xl rounded-2xl">
-            Order Now
-          </button></Link>
+          <Link href="/shop" className="w-full">
+            <button className="mt-4 px-8 py-3 border border-gray-900 text-black text-lg font-semibold rounded-full hover:bg-black hover:text-white transition-all duration-300">
+              Order Now
+            </button>
+          </Link>
         </div>
       </div>
     </div>
