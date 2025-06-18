@@ -87,6 +87,7 @@ export default function ShopPage() {
                 alt={product.name}
                 width={600}
                 height={400}
+                 
                 className="rounded-lg object-cover lg-w[600px] hover:translate-y-5 scale-75"
               />
             )}

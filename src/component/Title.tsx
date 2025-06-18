@@ -22,13 +22,13 @@ const Title = () => {
 
         {/* Image Section */}
         <div className="flex justify-center">
-          <Image
-            src="/pic1.png"
-            width={600}
-            height={600}
-            alt="Rocket Seater"
-            className="w-full max-w-[500px] h-auto object-contain"
-          />
+<Image
+  src="/pic1.png" // ✅ Static image from public folder
+  width={600}     // ✅ Informing Next.js actual size
+  height={600}
+  alt="Rocket Single Seater Sofa" // ✅ Clear & keyword-based alt for SEO      // ✅ 🚀 Force preload to improve LCP
+  className="w-full max-w-[500px] h-auto object-contain"
+/>
         </div>
       </div>
     </section>
